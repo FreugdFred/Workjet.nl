@@ -1,0 +1,20 @@
+{% extends "Base.html" %} {% set Name = "Register" %} {% block head %}Register{% endblock %} {% block body %}
+
+<form id="register-form" method="POST">
+  {{ form.csrf_token }}
+  <div class="m-4 rounded-lg bg-white p-8 shadow-xl sm:mx-auto sm:mt-36 sm:max-w-lg">
+    <p id="start-text" class="text-xl font-bold">{{ language_dict['start-text'] }}</p>
+    <div class="mt-10">
+      <p id="not-text" class="mb-5 hidden font-bold text-blue-600">{{ language_dict['not-text'] }}</p>
+      <p id="sendemail" class="mb-5 font-bold hidden text-green-500">{{ language_dict['sendemail'] }}</p>
+      <label id="email-label" for="email" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">{{ language_dict['email-label'] }}</label>
+      {{ form.email(id="email", placeholder="email@email.com", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary-600 block w-full p-2.5") }}
+    </div>
+    <div class="mt-5 mb-5">
+      <a id="login-text" href="/login" class="text-sm font-medium text-blue-600 hover:underline">{{ language_dict['login-text'] }}</a>
+    </div>
+    <button type="submit" id="started-button" class="w-full rounded-xl bg-blue-600 p-2 text-sm font-medium text-white hover:bg-blue-300">{{ language_dict['started-button'] }}</button>
+  </div>
+</form>
+
+{% endblock %}

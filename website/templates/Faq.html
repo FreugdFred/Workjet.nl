@@ -1,0 +1,20 @@
+{% extends "Base.html" %} {% set Name = "Faq" %} {% block head %}Faq{% endblock %} {% block body %}
+
+
+
+<div class="mx-auto mt-6 w-4/5 gap-4 rounded-xl bg-white p-6 shadow-xl md:mt-20 lg:w-2/5 border">
+    <div class="grid md:grid-cols-2">
+        <div class="flex flex-col items-center">
+            <p id="question-employer" class="text-center text-xl mb-4">{{ language_dict['question-employer'] }}</p>
+          <button onclick="window.location.href='/werknemer'" id="button-1-text" class="mt-1 rounded-lg bg-gray-200 px-2 py-1 font-bold hover:bg-gray-400">{{ language_dict['button-1-text'] }}</button>
+        </div>
+        <div class="flex flex-col items-center">
+            <p id="question-employee" class="text-center text-xl mb-4">{{ language_dict['question-employee'] }}</p>
+          <button onclick="window.location.href='/werkgever'" id="button-2-text" class="mt-1 rounded-lg bg-gray-200 px-2 py-1 font-bold hover:bg-gray-400">{{ language_dict['button-2-text'] }}</button>
+        </div>
+    </div>
+    <p id="figure-text" class="text-center text-xs font-light mt-10">{{ language_dict['figure-text'] }}</p>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{
+    "text-btn" : "Get contacts",
+    "send-email-text" : "Stuur een email naar ons om de contactgevens te krijgen",
+    "button-text-copy" : "Copy to clipboard",
+
+    "inexperience-title" : "Work experience in Ukraine",
+    "experience-title" : "Work experience outside of Ukraine",
+    "comments-title" : "Dyploma's, driver license, hobby's",
+    "trigger" : "End of page",
+
+    "landbouw-work" : "agriculture", 
+    "bouw-work" : "construction", 
+    "handel-work" : "sales",
+    "gezondheidszorg-work" : "health care", 
+    "communicatie-work" : "communication", 
+    "onderwijs-work" : "education", 
+    "horeca-work" : "catering", 
+    "transport-work" : "transport", 
+    "productie-work" : "production", 
+    "engineering-work" : "engineering",
+
+    "MEN" : "men",
+    "WOMAN" : "woman",
+    "FULLTIME" : "full-time",
+    "PARTTIME" : "part-time",
+    "LOOKING" : "searching for a job",
+    "NOTLOOKING" : "not searching for a job"
+}

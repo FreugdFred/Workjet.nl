@@ -1,0 +1,81 @@
+{% extends "Base.html" %} {% set Name = "Adminedit" %} {% block head %}Admin edit{% endblock %} {% block body %}
+
+<div class="rounded-xl shadow-xl bg-white mx-auto px-10 py-6 md:w-1/2 mt-20 w-5/6">
+  <form method="post">
+    {{ form.csrf_token }}
+    <label id="id-label" for="id" class="mt-2 block text-sm font-medium text-gray-900">User id</label>
+    {{ form.userid(id="id", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="email-label" for="email" class="mt-2 block text-sm font-medium text-gray-900">Email</label>
+    {{ form.email(id="email", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="password-label" for="password" class="mt-2 block text-sm font-medium text-gray-900">Password</label>
+    {{ form.password(id="password", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="create-label" for="create" class="mt-2 block text-sm font-medium text-gray-900">Creation date</label>
+    {{ form.creationdate(id="create", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="last-label" for="last" class="mt-2 block text-sm font-medium text-gray-900">Last login</label>
+    {{ form.lastlogin(id="last", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="employer-label" for="employer" class="mt-2 block text-sm font-medium text-gray-900">Employer account</label>
+    {{ form.employer(id="employer", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="ip-label" for="ip" class="mt-2 block text-sm font-medium text-gray-900">ip address</label>
+    {{ form.ip(id="ip", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}} {% if role == 'employer' %} {{ form.csrf_token }}
+
+    <label id="coins-label" for="coins" class="mt-2 block text-sm font-medium text-gray-900">Coins</label>
+    {{ employer_form.coins(id="coins", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="subscription-label" for="subscription" class="mt-2 block text-sm font-medium text-gray-900">Subscription</label>
+    {{ employer_form.subscription(id="subscription", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="user_id-label" for="user_id" class="mt-2 block text-sm font-medium text-gray-900">User id employer</label>
+    {{ employer_form.user_id(id="user_id", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}} {% endif %} {% if role ==
+    'employee' %}
+
+    <p class="my-6 font-bold">Employee id: {{ employee_id }}</p>
+
+    <label id="name-label" for="name" class="mt-2 block text-sm font-medium text-gray-900">name account</label>
+    {{ employee_form.name(id="name", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="age-label" for="age" class="mt-2 block text-sm font-medium text-gray-900">age account</label>
+    {{ employee_form.age(id="age", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="language-label" for="language" class="mt-2 block text-sm font-medium text-gray-900">language account</label>
+    {{ employee_form.language(id="language", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="region-label" for="region" class="mt-2 block text-sm font-medium text-gray-900">region account</label>
+    {{ employee_form.region(id="region", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="fulltime-label" for="fulltime" class="mt-2 block text-sm font-medium text-gray-900">fulltime account</label>
+    {{ employee_form.fulltime(id="fulltime", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="employer-label" for="employer" class="mt-2 block text-sm font-medium text-gray-900">Employer account</label>
+    {{ employee_form.schooling(id="employer", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="men-label" for="men" class="mt-2 block text-sm font-medium text-gray-900">men account</label>
+    {{ employee_form.men(id="men", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="comment-label" for="comment" class="mt-2 block text-sm font-medium text-gray-900">comment account</label>
+    {{ employee_form.comment(id="comment", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="contact-label" for="contact" class="mt-2 block text-sm font-medium text-gray-900">contact account</label>
+    {{ employee_form.contact(id="contact", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="outexperience-label" for="outexperience" class="mt-2 block text-sm font-medium text-gray-900">outexperience account</label>
+    {{ employee_form.outexperience(id="outexperience", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="inexperience-label" for="inexperience" class="mt-2 block text-sm font-medium text-gray-900">inexperience account</label>
+    {{ employee_form.inexperience(id="inexperience", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}}
+
+    <label id="currentlylooking-label" for="currentlylooking" class="mt-2 block text-sm font-medium text-gray-900">currentlylooking account</label>
+    {{ employee_form.currentlylooking(id="currentlylooking", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 block w-full p-2.5")}} {% endif %}
+
+    <div class="flex flex-col items-center justify-center mt-5">
+      <button method="submit" class="bg-blue-600 hover:bg-blue-300 w-1/2 rounded-xl text-white px-1 py-2">Sumbit edit</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

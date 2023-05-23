@@ -1,0 +1,11 @@
+{
+    "login-text" : "Log in je account",
+    "alreadyknown" : "Jouw email is al bekend bij ons, login",
+    "error" : "Het wachtwoord is incorrect",
+    "email-label" : "Jouw email",
+    "password-label" : "Wachtwoord",
+    "forgot-text" : "Wachtwoord vergeten?",
+    "login-button" : "Login",
+    "dont-text" : "Nog geen account?",
+    "sign-text" : "registreer"
+}

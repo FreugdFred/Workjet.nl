@@ -1,0 +1,44 @@
+{
+    "filter-text" : "фільтр",
+    "search-placeholder" : "пошук",
+
+    "gender-label" : "Вибір статі",
+    "Male-option-gender" : "Чоловік",
+    "Female-option-gender" : "Жінка",
+
+    "searching-label" : "Чи ви зараз в пошуку роботи?",
+    "yessearching-option-searching" : "Шукаю роботу",
+    "notsearching-option-searching" : "Не шукаю роботу",
+
+    "work-label" : "Виберіть робочий час",
+    "Full-option-work" : "36-40 год в тиждень",
+    "Part-option-work" : "2-36 год в тиждень",
+
+    "region-label" : "Виберіть регіон",
+    "work-select-label" : "Виберіть сектор",
+
+    "inexperience-title" : "Досвід роботи в Україні",
+    "experience-title" : "Досвід роботи за межами України",
+    "comments-title" : "Дипломи, водійське посвідчення, хоббі",
+    "trigger" : "кінець сторінки",
+    "results" : "результати: ",
+
+
+    "landbouw-work" : "Агрікультура", 
+    "bouw-work" : "Будівництво", 
+    "handel-work" : "Продажа", 
+    "gezondheidszorg-work" : "Здоров‘я", 
+    "communicatie-work" : "Комунікації", 
+    "onderwijs-work" : "Освіта", 
+    "horeca-work" : "Готель/Харчування", 
+    "transport-work" : "Траспорт", 
+    "productie-work" : "Продукція/Пакування", 
+    "engineering-work" : "Техніка",
+
+    "MEN" : "чоловік",
+    "WOMAN" : "жінка",
+    "FULLTIME" : "36-40 год в тиждень",
+    "PARTTIME" : "2-36 год в тиждень",
+    "LOOKING" : "Шукаю роботу",
+    "NOTLOOKING" : "Не шукаю роботу"
+}

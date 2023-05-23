@@ -1,0 +1,11 @@
+{% extends "Base.html" %} {% set Name = "500" %} {% block head %}Internal error{% endblock %} {% block body %}
+
+<div class="flex flex-col items-center mx-auto mt-20 w-fit p-6">
+  <h1 id="error-text" class="text-center font-bold text-white text-6xl">{{ language_dict['error-text'] }}</h1>
+  <button onclick="location.href='/contact';" href="/contact" id="report-btn" class="text-center hover:bg-white hover:text-black rounded font-bold text-white px-4 py-1 mt-20 text-2xl">
+    {{ language_dict['report-btn'] }}
+  </button>
+  <button onclick="location.href='/';" href="/" id="home-btn" class="text-center hover:bg-white hover:text-black rounded font-bold text-white px-4 py-1 mt-20 text-2xl">{{ language_dict['home-btn'] }}</button>
+</div>
+
+{% endblock %}

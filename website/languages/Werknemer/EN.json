@@ -1,0 +1,33 @@
+{
+    "register-question" : "How do I make an employee account?",
+    "register-list-1" : "Navigate to 'register'",
+    "register-list-2" : "Enter your email and click on the 'Get started' button",
+    "register-list-3" : "Check the mailbox of your email and click on the email you received from us, then click on the button 'Verify Email'",
+    "register-list-4" : "No email found? Check whether you have entered the correct email address, also check the spam or advertising folder in your inbox",
+    "register-list-5" : "Create a password with a minimum of 10 characters and maximum 35 characters, do not forget to save the password somewhere save.",
+    "register-list-6" : "At 'Type of account' select 'employee'",
+    "register-list-7" : "Click on the 'Submit' button",
+    "register-list-8" : "Now log in with the password you just chose",
+    "button-1-text" : "Register?",
+
+    "profile-question" : "  How do I make an employee profile?",
+    "profile-list-1" : "  Navigate to 'profile'",
+    "profile-list-2" : "  Fill all the information you seen on the screen",
+    "profile-list-3" : "  Click on 'Save Profile'",
+    "profile-list-4" : "  Your profile is now saved, everyone can see it",
+    "button-2-text" : "Profile?",
+
+    "active-question" : "How do I set my profile to inactive?",
+    "active-list-1" : "Navigate to 'profile'",
+    "active-list-2" : "At 'Are you currently looking for work' select 'No'",
+    "active-list-3" : "Click on 'Save Profile'",
+    "active-list-4" : "Employers can now see from your profile that you are not a looking for a job",
+    "button-3-text" : "Profile?",
+
+    "delete-question" : "How do I delete my profile?",
+    "delete-list-1" : "Navigate to 'profile'",
+    "delete-list-2" : "Click on 'Delete profile'",
+    "delete-list-3" : "Your profile is now deleted",
+    "button-4-text" : "Profile?"
+
+}

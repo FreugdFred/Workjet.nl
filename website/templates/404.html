@@ -1,0 +1,7 @@
+{% extends "Base.html" %} {% set Name = "404" %} {% block head %}Page not found{% endblock %} {% block body %}
+<div class="flex flex-col items-center mx-auto mt-20 w-fit p-6">
+  <h1 id="exist-text" class="text-center font-bold text-white text-6xl">{{ language_dict['exist-text'] }}</h1>
+  <button onclick="location.href='/';" href="/" id="go-btn" class="text-center hover:bg-white hover:text-black rounded font-bold text-white px-4 py-1 mt-20 text-2xl">{{ language_dict['go-btn'] }}</button>
+</div>
+
+{% endblock %}

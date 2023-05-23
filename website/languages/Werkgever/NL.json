@@ -1,0 +1,38 @@
+{
+    "register-question" : "Hoe maak ik een werkgever account?",
+    "register-list-1" : "Navigeer naar 'registeer'",
+    "register-list-2" : "Vul je email in en klik op de knop 'Maak mijn account'",
+    "register-list-3" : "Kijk in de opgegeven mail zijn mailbox en klik op de mail die u van ons heeft gekregen, klik vervolgens op de knop 'Verify Email'",
+    "register-list-4" : "Geen mail gevonden? Kijk of u het juiste email adres heeft ingevuld, kijk ook de spam of reclame folder van u inbox",
+    "register-list-5" : "Maak een wachtwoord van minimaal 10 characters en maximaal 35 characters, vergeet het wachtwoord niet te bewaren.",
+    "register-list-6" : "Selecteer bij 'Type account' 'werkgever'",
+    "register-list-7" : "Klik op de knop 'registeer'",
+    "register-list-8" : "Log nu in met het wachtwoord dat u zojuist gekozen had.",
+    "button-1-text" : "Register?",
+
+    "search-question" : "Hoe filter ik profielen?",
+    "search-list-1" : "Navigeer naar 'zoek'",
+    "search-list-2" : "Filter op tekst in profiel: Klik in de zoekbalk en typ de woorden die het profiel moeten matchen",
+    "search-list-3" : "Klik op het vergrootglas rechts van de zoekbalk om u zoekopdracht te doen",
+    "search-list-4" : "Filter gender, regio en werktijd: Klik op een 'drop down menu' naar keuze, Klik op de keuze die u wilt selecteren",
+    "search-list-5" : "Klik op het vergrootglas rechts van de zoekbalk om u zoekopdracht te doen",
+    "search-list-6" : "None betekent dat hij niet zoekt met die filter",
+    "search-list-7" : "Filter op werk: klik op het werk waarop u wilt filteren, een profiel moet overeenkomen met 1 van u geselecteerde werken",
+    "search-list-8" : "Klik op het vergrootglas rechts van de zoekbalk om u zoekopdracht te doen",
+    "button-2-text" : "Zoek?",
+    
+    "bookmark-question" : "Hoe bewaar ik profielen?",
+    "bookmark-list-1" : "Navigeer naar 'Zoek'",
+    "bookmark-list-2" : "Kies een profiel die u wilt bewaren",
+    "bookmark-list-3" : "Klik rechtsboven op het 'Bookmark' icoontje",
+    "bookmark-list-4" : "Het profiel is nu opgeslagen",
+    "bookmark-list-5" : "U kunt de bewaarde profielen in het Bewaard kopje van de navigatiebalk",
+    "button-3-text" : "Bewaren?",
+
+    "saved-question" : "Hoe contacteer ik mijn bewaarde profielen?",
+    "saved-list-1" : "Navigeer naar 'Bewaard'",
+    "saved-list-2" : "Klik op de knop 'kopiëren naar klembord'",
+    "saved-list-3" : "Ga naar email, CRL+V de mail en stuur de mail naar info@Workjet.nl",
+    "saved-list-4" : "Wij sturen zo snel mogelijk een email terug",
+    "button-4-text" : "Bewaren?"
+}

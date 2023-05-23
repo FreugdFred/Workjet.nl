@@ -1,0 +1,33 @@
+{
+    "register-question" : "Hoe maak ik een werknemer account?",
+    "register-list-1" : "Navigeer naar 'registeer'",
+    "register-list-2" : "Vul je email in en klik op de knop 'Maak mijn account'",
+    "register-list-3" : "Kijk in de opgegeven mail zijn mailbox en klik op de mail die u van ons heeft gekregen, klik vervolgens op de knop 'Verify Email'",
+    "register-list-4" : "Geenn mail gevonden? Kijk of u het juiste email adres heeft ingevuld, kijk ook de spam of reclame folder van u inbox",
+    "register-list-5" : "Maak een wachtwoord van miniaal 10 characters en maximaal 35 characters, vergeet het wachtwoord niet te bewaren.",
+    "register-list-6" : "selecteer bij 'Type account' 'werknemer'",
+    "register-list-7" : "Klik op de knop 'registeer'",
+    "register-list-8" : "Log nu in met het wachtwoord dat u zojuist gekozen had.",
+    "button-1-text" : "registeren?",
+
+    "profile-question" : "Hoe maak ik een CV profiel?",
+    "profile-list-1" : "Navigeer naar 'Profiel'",
+    "profile-list-2" : "Vul alle informatie op het scherm in",
+    "profile-list-3" : "Klik op 'Profiel opslaan'",
+    "profile-list-4" : "Je profiel is nu opgeslagen, iedereen kan het nu zien",
+    "button-2-text" : "Profiel?",
+
+    "active-question" : "Hoe stel ik mijn profiel op non actief in?",
+    "active-list-1" : "Navigeer naar 'Profiel'",
+    "active-list-2" : "Bij 'Ben je werkzoekende?' selecteer je 'Nee'",
+    "active-list-3" : "Klik op 'Profiel opslaan'",
+    "active-list-4" : "Werkgever zien nu aan je profiel dat je niet werkzoekende bent",
+    "button-3-text" : "Profiel?",
+
+    "delete-question" : "Hoe verwijder ik mijn account?",
+    "delete-list-1" : "Navigeer naar 'Profiel'",
+    "delete-list-2" : "Klik op 'Verwijder profiel'",
+    "delete-list-3" : "Je profiel in nu verwijderd",
+    "button-4-text" : "Profiel?"
+
+}

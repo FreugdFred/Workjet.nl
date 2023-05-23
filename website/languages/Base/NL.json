@@ -1,0 +1,11 @@
+{
+    "anc-contact" : "contact",
+    "anc-search" : "zoeken",
+    "anc-profile" : "profiel",
+    "anc-saved" : "bewaard",
+    "anc-logout" : "loguit",
+    "anc-login" : "login",
+    "anc-register" : "register",
+    "anc-question" : "vragen",
+    "anc-blog" : "aankondigingen"
+}

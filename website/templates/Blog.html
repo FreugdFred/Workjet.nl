@@ -1,0 +1,23 @@
+{% extends "Base.html" %} {% set Name = "Blog" %} {% block head %}Blog{% endblock %} {% block body %}
+
+<div id="blog-list" class="p-10">
+    <template id="blog-post">
+        <div id="template-id" class="shadow-xl lg:min-w-[800px] max-w-[1000px] rounded-xl bg-white mx-auto relative p-5 mt-10">
+            <p id="blog-title" class="text-center font-bold text-xl"></p>
+            <p id="blog-text" class="text-center"></p>
+            <div class="grid grid-cols-2 p-4 gap-2">
+                <button value="" name="dislike" onclick="bloglike(this);" id="blog-dislike" class="hover:bg-red-200 bg-red-400 w-full rounded-lg p-2 text-white"></button>
+                <button value="" name="like" onclick="bloglike(this);" id="blog-like" class="hover:bg-green-200 bg-green-400 w-full rounded-lg p-2 text-white"></button>
+            </div>
+            <div class="grid grid-cols-2">
+                <p id="blog-author" class="text-left text-gray-400 text-sm ml-5"></p>
+                <p id="blog-date" class="text-right text-gray-400 text-sm mr-5"></p>
+            </div>
+        </div>
+    </template>
+</div>
+
+<div id="trigger" class="w-full p-5 text-center font-bold text-white">{{ language_dict['trigger'] }}</div>
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{
+    "filter-text" : "filter",
+    "search-placeholder" : "Zoek",
+
+    "gender-label" : "Filter op gender",
+    "Male-option-gender" : "Man",
+    "Female-option-gender" : "Vrouw",    
+
+    "searching-label" : "Filter op werkzoekende",
+    "yessearching-option-searching" : "Werk zoekend",
+    "notsearching-option-searching" : "Niet werk zoekend",
+
+    "work-label" : "Filter op werktijd",
+    "Full-option-work" : "Voltijd",
+    "Part-option-work" : "Deeltijd",
+
+    "region-label" : "Filter op regio",
+    "work-select-label" : "Filter op werk",
+
+    "inexperience-title" : "Werkervaring Oekraine",
+    "experience-title" : "Werkervaring buiten Oekraine",
+    "comments-title" : "Diploma, rijbewijs en hobbies",
+    "trigger" : "Einde van de pagina",
+    "results" : "Resultaten: ",
+
+
+    "landbouw-work" : "landbouw", 
+    "bouw-work" : "bouw", 
+    "handel-work" : "handel", 
+    "gezondheidszorg-work" : "gezondheidszorg", 
+    "communicatie-work" : "communicatie", 
+    "onderwijs-work" : "onderwijs", 
+    "horeca-work" : "horeca", 
+    "transport-work" : "transport", 
+    "productie-work" : "productie", 
+    "engineering-work" : "engineering", 
+
+    "MEN" : "Man",
+    "WOMAN" : "vrouw",
+    "FULLTIME" : "voltijd",
+    "PARTTIME" : "deeltijd",
+    "LOOKING" : "Werk zoekend",
+    "NOTLOOKING" : "niet zoekend"
+}

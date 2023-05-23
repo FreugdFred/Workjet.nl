@@ -1,0 +1,38 @@
+{
+    "register-question" : "How do I make the employer account?",
+    "register-list-1" : "Navigate to 'register'",
+    "register-list-2" : "Enter your email and click on the 'Get started'",
+    "register-list-3" : "Check the mailbox of your email and click on the email you received from us, then click on the button 'Verify Email'",
+    "register-list-4" : "No email found? Check whether you have entered the correct email address, also check the spam or advertising folder in your inbox",
+    "register-list-5" : "Create a password with a minimum of 10 characters and maximum 35 characters, do not forget to save the password somewhere save.",
+    "register-list-6" : "At the 'Type of account' select 'employer'",
+    "register-list-7" : "Click on the 'Submit button'",
+    "register-list-8" : "Now log in with the password you just chosed.",
+    "button-1-text" : "Register?",
+
+    "search-question" : "How do I filter profiles?",
+    "search-list-1" : "Navigate to 'search'",
+    "search-list-2" : "Filter by text in profile: Click in the search bar and type the words you want to match the profile with",
+    "search-list-3" : "Click the magnifying glass to the right of the search bar to do your search",
+    "search-list-4" : "Filter gender, region and working time: Click on 'drop down menu' of your choice, Click on the choice you want to select",
+    "search-list-5" : "Click the magnifying glass to the right of the search bar to do your search",
+    "search-list-6" : "None means that it does not search with that filter",
+    "search-list-7" : "Filter by work: click on the work you want to filter on, a profile must match 1 of your selected works",
+    "search-list-8" : "Click the magnifying glass to the right of the search bar to do your search",
+    "button-2-text" : "Search?",
+    
+    "bookmark-question" :"How do I save the profiles?",
+    "bookmark-list-1" : "Navigate to 'search'",
+    "bookmark-list-2" : "Choose a profile you want to save",
+    "bookmark-list-3" : "Click on the 'Bookmark' icon at the top right",
+    "bookmark-list-4" : "The profile is now saved",
+    "bookmark-list-5" : "You can view the saved profiles in the Saved heading of the navigation bar",
+    "button-3-text" : "Save?",
+
+    "saved-question" : "How do I contact my saved profiles?",
+    "saved-list-1" : "Navigate to 'saved'",
+    "saved-list-2" : "Click the 'copy to clipboard' button",
+    "saved-list-3" : "Go to your email, CRL+V the email and send the email to info@robotta.nl",
+    "saved-list-4" : "We will sent reply at your email as soon as we can",
+    "button-4-text" : "Save?"
+}

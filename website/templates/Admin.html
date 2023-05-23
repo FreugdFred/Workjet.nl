@@ -1,0 +1,59 @@
+{% extends "Base.html" %} {% set Name = "Admin" %} {% block head %}Admin{% endblock %} {% block body %}
+
+<div class="flex gap-2 md:mt-10 md:ml-10 mx-auto p-2 md:p-0">
+  <div class="p-4 bg-white rounded-xl shadow-xl w-fit mb-2">
+    <p>
+      users:
+      <span class="font-bold">{{ userdata|length }}</span>
+    </p>
+  </div>
+  <div class="p-4 bg-white rounded-xl shadow-xl w-fit mb-2">
+    <p>
+      employee accounts:
+      <span class="font-bold">{{ userdata|length - employer_length }}</span>
+    </p>
+  </div>
+  <div class="p-4 bg-white rounded-xl shadow-xl w-fit mb-2">
+    <p>
+      employer accounts:
+      <span class="font-bold">{{ employer_length }}</span>
+    </p>
+  </div>
+</div>
+
+<div class="mx-auto md:px-10 md:p-0 p-2 rounded-xl max-w-full overflow-x-auto">
+  <table class="w-full text-sm text-left rounded-xl shadow-xl">
+    <thead class="text-xs text-gray-700 bg-gray-300 rounded-xl">
+      <tr class="rounded-xl">
+        <th scope="col" class="text-base font-bold p-2 rounded-tl-xl">Email</th>
+        <th scope="col" class="text-base font-bold p-2">User id</th>
+        <th scope="col" class="text-base font-bold p-2">Creation date</th>
+        <th scope="col" class="text-base font-bold p-2">Last login</th>
+        <th scope="col" class="text-base font-bold p-2">Employer account</th>
+        <th scope="col" class="text-base font-bold p-2">ip address</th>
+        <th scope="col" class="text-base font-bold p-2">Edit</th>
+        <th scope="col" class="text-base font-bold p-2 rounded-tr-xl">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in userdata %}
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th class="px-1 py-3">{{ user.email }}</th>
+        <th class="px-1 py-3">{{ user.id }}</th>
+        <td class="px-1 py-3">{{ user.create_date }}</td>
+        <td class="px-1 py-3">{{ user.last_login }}</td>
+        <td class="px-1 py-3 font-bold text-center">{{ 'X' if user.employer == True }}</td>
+        <td class="px-1 py-3">{{ user.ip }}</td>
+        <td class="px-1 py-3">
+          <a class="bg-yellow-300 hover:bg-yellow-100 rounded-xl shadow-xl text-center px-2 py-1" href="/admin/edit/{{ 'employer' if user.employer == True else 'employee'  }}/{{ user.id }}">Edit</a>
+        </td>
+        <td class="px-1 py-3">
+          <a class="bg-red-400 hover:bg-red-100 rounded-xl shadow-xl text-center px-2 py-1" href="/admin/delete/{{ user.id }}">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

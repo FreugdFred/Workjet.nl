@@ -1,0 +1,28 @@
+{
+    "text-btn" : "Krijg contact informatie",
+    "send-email-text" : "Stuur ons een mail om de contact gevens te krijgen",
+    "button-text-copy" : "Kopieer naar klembord",
+
+    "inexperience-title" : "Werkervaring Oekraine",
+    "experience-title" : "Werkervaring buiten Oekraine",
+    "comments-title" : "Diploma, rijbewijs en hobbies",
+    "trigger" : "Einde van de pagina",
+
+    "landbouw-work" : "landbouw", 
+    "bouw-work" : "bouw", 
+    "handel-work" : "handel", 
+    "gezondheidszorg-work" : "gezondheidszorg", 
+    "communicatie-work" : "communicatie", 
+    "onderwijs-work" : "onderwijs", 
+    "horeca-work" : "horeca", 
+    "transport-work" : "transport", 
+    "productie-work" : "productie", 
+    "engineering-work" : "engineering", 
+
+    "MEN" : "Man",
+    "WOMAN" : "vrouw",
+    "FULLTIME" : "voltijd",
+    "PARTTIME" : "deeltijd",
+    "LOOKING" : "Werk zoekend",
+    "NOTLOOKING" : "niet zoekend"
+}

@@ -1,0 +1,11 @@
+{
+    "login-text" : "Sign in to your account",
+    "alreadyknown" : "This email is already registered, login instead",
+    "error" : "The password is incorrect",
+    "email-label" : "Your email",
+    "password-label" : "Password",
+    "forgot-text" : "Forgot password?",
+    "login-button" : "Sign in",
+    "dont-text" : "Don’t have an account yet?",
+    "sign-text" : "Sign up"
+}

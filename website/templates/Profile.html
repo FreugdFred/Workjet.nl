@@ -1,0 +1,193 @@
+{% extends "Base.html" %} {% set Name = "Profile" %} {% block head %}Profile{% endblock %} {% block body %}
+
+
+<form id="profile-form" method="POST">
+  {{ form.csrf_token }}
+  <div class="mx-auto w-4/5 gap-4 rounded-lg bg-white p-8 shadow-xl lg:mt-10 mt-6 lg:grid lg:w-2/3 lg:grid-cols-2">
+    <div class="w-auto">
+      <div class="mx-auto w-fit gap-4 lg:flex">
+        <div class="mx-auto w-fit rounded-full border-4 border-black">
+          <svg class="h-16 w-16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <p class="my-auto text-center font-bold">{{ user.email }}</p>
+      </div>
+      <p id="abbreviation-text" class="font-bold text-center mt-2 text-sm">{{ language_dict['abbreviation-text'] }}</p>
+      <p id="automatic-text" class="font-bold text-center mt-2 text-sm">{{ language_dict['automatic-text'] }}</p>
+      <label id="name-text" for="name" class="mt-5 block">{{ language_dict['name-text'] }}</label>
+      {{ form.name(id="name", placeholder="John", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900") }}
+
+      <label id="age-text" for="age" class="mt-5 block">{{ language_dict['age-text'] }}</label>
+      {{ form.age(id="age", placeholder="43", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900") }}
+
+      <label id="region-label" for="region" class="mt-5 block">{{ language_dict['region-label'] }}</label>
+      {{ form.region(id="region", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500") }}
+
+      <label id="work-label" for="time" class="mt-5 block">{{ language_dict['work-label'] }}</label>
+      {{ form.fulltime(id="time", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500") }}
+
+      <label id="gender-label" for="gender" class="mt-5 block">{{ language_dict['gender-label'] }}</label>
+      {{ form.men(id="gender", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500") }}
+
+      <label id="currently-label" for="currently" class="mt-5 block">{{ language_dict['currently-label'] }}</label>
+      {{ form.currentlylooking(id="currently", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500") }}
+
+      <label class="mt-5 block" id="language-label" for="input-language">{{ language_dict['language-label'] }}</label>
+      <div id="select-div">
+        <div id="select-language-field" class="flex gap-4">
+          <select name="input-language" id="input-language" class="mb-4 block w-1/2 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500">
+            <option id="Arabic-select" value="{{ language_dict['value-1'] }}">{{ language_dict['language-1'] }}</option>
+            <option id="Bulgarian-select" value="{{ language_dict['value-2'] }}">{{ language_dict['language-2'] }}</option>
+            <option id="Chinese-select" value="{{ language_dict['value-3'] }}">{{ language_dict['language-3'] }}</option>
+            <option id="Croatian-select" value="{{ language_dict['value-4'] }}">{{ language_dict['language-4'] }}</option>
+            <option id="Czech-select" value="{{ language_dict['value-5'] }}">{{ language_dict['language-5'] }}</option>
+            <option id="Danish-select" value="{{ language_dict['value-6'] }}">{{ language_dict['language-6'] }}</option>
+            <option id="Dutch-select" value="{{ language_dict['value-7'] }}">{{ language_dict['language-7'] }}</option>
+            <option id="English-select" value="{{ language_dict['value-8'] }}">{{ language_dict['language-8'] }}</option>
+            <option id="Estonian-select" value="{{ language_dict['value-9'] }}">{{ language_dict['language-9'] }}</option>
+            <option id="Finnish-select" value="{{ language_dict['value-10'] }}">{{ language_dict['language-10'] }}</option>
+            <option id="French-select" value="{{ language_dict['value-11'] }}">{{ language_dict['language-11'] }}</option>
+            <option id="German-select" value="{{ language_dict['value-12'] }}">{{ language_dict['language-12'] }}</option>
+            <option id="Greek-select" value="{{ language_dict['value-13'] }}">{{ language_dict['language-13'] }}</option>
+            <option id="Hungarian-select" value="{{ language_dict['value-14'] }}">{{ language_dict['language-14'] }}</option>
+            <option id="Irish-select" value="{{ language_dict['value-15'] }}">{{ language_dict['language-15'] }}</option>
+            <option id="Italian-select" value="{{ language_dict['value-16'] }}">{{ language_dict['language-16'] }}</option>
+            <option id="Japanese-select" value="{{ language_dict['value-17'] }}">{{ language_dict['language-17'] }}</option>
+            <option id="Latvian-select" value="{{ language_dict['value-18'] }}">{{ language_dict['language-18'] }}</option>
+            <option id="Lithuanian-select" value="{{ language_dict['value-19'] }}">{{ language_dict['language-19'] }}</option>
+            <option id="Maltese-select" value="{{ language_dict['value-20'] }}">{{ language_dict['language-20'] }}</option>
+            <option id="Polish-select" value="{{ language_dict['value-21'] }}">{{ language_dict['language-21'] }}</option>
+            <option id="Portuguese-select" value="{{ language_dict['value-22'] }}">{{ language_dict['language-22'] }}</option>
+            <option id="Romanian-select" value="{{ language_dict['value-23'] }}">{{ language_dict['language-23'] }}</option>
+            <option id="Russian-select" value="{{ language_dict['value-24'] }}">{{ language_dict['language-24'] }}</option>
+            <option id="Slovak-select" value="{{ language_dict['value-25'] }}">{{ language_dict['language-25'] }}</option>
+            <option id="Slovenian-select" value="{{ language_dict['value-26'] }}">{{ language_dict['language-26'] }}</option>
+            <option id="Spanish-select" value="{{ language_dict['value-27'] }}">{{ language_dict['language-27'] }}</option>
+            <option id="Swedish-select" value="{{ language_dict['value-28'] }}">{{ language_dict['language-28'] }}</option>
+            <option id="Turkisch-select" value="{{ language_dict['value-29'] }}">{{ language_dict['language-29'] }}</option>
+            <option id="Ukrainian-select" value="{{ language_dict['value-30'] }}">{{ language_dict['language-30'] }}</option>
+          </select>
+          <select id="input-skill" class="mb-4 block w-1/2 rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500">
+            <option id="Beginner-select" value="Beginner">{{ language_dict['Beginner-select'] }}</option>
+            <option id="Intermedite-select" value="Intermedite">{{ language_dict['Intermedite-select'] }}</option>
+            <option id="Advanced-select" value="Advanced">{{ language_dict['Advanced-select'] }}</option>
+            <option id="Native-select" value="Native">{{ language_dict['Native-select'] }}</option>
+          </select>
+          <button type="button" onclick="DeleteSelect(this);">
+            <svg class="w-4 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <button type="button" onclick="AddSelect();" class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500">+</button>
+      {{ form.language(class="hidden", id="language-form") }}
+    </div>
+    <div class="lg:w-auto mt-auto">
+      <label id="schooling-label" for="school" class="mt-5 block w-full text-sm font-medium text-gray-900">{{ language_dict['schooling-label'] }}</label>
+      {{ form.schooling(id="school", placeholder="Universiteit van Amsterdam, IT Master", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900") }}
+
+      <label id="comment-label" for="comment" class="mt-5 block w-full text-sm font-medium text-gray-900">{{ language_dict['comment-label'] }}</label>
+      {{ form.comment(id="comment", placeholder="Ik heb 20 jaar werkervaring in de verkoop, ik ben goed in het troosten van klanten, ik werk niet graag tot laat.", class="block h-20 w-full rounded-lg
+      border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900") }}
+
+      <label id="outexperience-label" for="outexperience" class="mt-5 block w-full text-sm font-medium text-gray-900">{{ language_dict['outexperience-label'] }}</label>
+      {{ form.outexperience(id="outexperience", placeholder="Ik heb 20 jaar werkervaring in de verkoop, ik ben goed in het troosten van klanten, ik werk niet graag tot laat.", class="block h-20 w-full
+      rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900") }}
+
+      <label id="inexperience-label" for="inexperience" class="mt-5 block w-full text-sm font-medium text-gray-900">{{ language_dict['inexperience-label'] }}</label>
+      {{ form.inexperience(id="inexperience", placeholder="Ik heb 20 jaar werkervaring in de verkoop, ik ben goed in het troosten van klanten, ik werk niet graag tot laat.", class="block h-20 w-full
+      rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900") }}
+
+      <label id="contact-label" for="contact" class="mt-5 block w-full text-sm font-medium text-gray-900">{{ language_dict['contact-label'] }}</label>
+      {{ form.contact(id="contact", placeholder="mijn email is voorbeeld@email.com en mijn telefoon nummer is 08-793248242", class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5
+      text-sm text-gray-900") }}
+
+      <p id="work-label-2" class="mt-5 font-bold">{{ language_dict['work-label-2'] }}</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+        <div class="block w-fit">
+          {{ form.landbouw(id="landbouw") }}
+          <label id="landbouw-label" for="landbouw">{{ language_dict['landbouw-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.bouw(id="bouw") }}
+          <label id="bouw-label" for="Bouw">{{ language_dict['bouw-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.handel(id="handel") }}
+          <label id="handel-label" for="Handel">{{ language_dict['handel-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.gezondheidszorg(id="gezondheidszorg") }}
+          <label id="gezondheidszorg-label" for="Gezondheidszorg">{{ language_dict['gezondheidszorg-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.communicatie(id="communicatie") }}
+          <label id="communicatie-label" for="Communicatie">{{ language_dict['communicatie-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.onderwijs(id="onderwijs") }}
+          <label id="onderwijs-label" for="Onderwijs">{{ language_dict['onderwijs-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.horeca(id="horeca") }}
+          <label id="horeca-label" for="Horeca">{{ language_dict['horeca-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.transport(id="transport") }}
+          <label id="transport-label" for="Transport">{{ language_dict['transport-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.productie(id="productie") }}
+          <label id="productie-label" for="Productie">{{ language_dict['productie-label'] }}</label>
+          <br />
+        </div>
+        <div class="block w-fit">
+          {{ form.engineering(id="engineering") }}
+          <label id="engineering-label" for="Engineering">{{ language_dict['engineering-label'] }}</label>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="col-span-2 mx-auto mt-5 gap-4 lg:flex">
+      <button type="button" id="save-button" onclick="SubmitPost();" class="mx-auto flex gap-2 rounded-lg bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-300">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25"></path>
+        </svg>
+        {{ language_dict['save-button'] }}
+      </button>
+      <button id="delete-button" onclick="DeletePost();" class="mx-auto mt-2 flex gap-2 rounded-lg bg-red-600 px-4 py-2 font-bold text-white hover:bg-red-300 lg:mt-0">
+        <svg type="button" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"></path>
+        </svg>
+        {{ language_dict['delete-button'] }}
+      </button>
+    </div>
+  </div>
+</form>
+
+
+
+
+{% endblock %}

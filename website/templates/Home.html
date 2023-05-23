@@ -1,0 +1,114 @@
+{% extends "Base.html" %} {% set Name = "Home" %} {% block head %}{{ language_dict['head-tab'] }}{% endblock %} {% block body %}
+
+<div class="mt-40 lg:mx-auto lg:mt-20 lg:w-1/2 lg:p-20">
+  <p id="head-text" class="text-center text-xl font-bold text-slate-100 lg:text-4xl">{{ language_dict['head-text'] }}</p>
+</div>
+
+
+<button id="update-flash" type="button" class="animated fadeOut fixed top-4 right-4 z-50 rounded-lg bg-green-500 px-4 py-2 text-white transition hover:bg-green-600 hidden">
+  <div class="alert-del flex items-center space-x-2">
+    <p id="updated-text" class="font-bold">{{ language_dict['updated-text'] }}</p>
+    <svg class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </div>
+</button>
+
+<div class="mt-5 bg-white flex p-2 gap-2 rounded-lg md:w-1/2 w-4/5 mx-auto">
+      <select id="input-bar" class="bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3">
+        <option value="'s Hertogenbosch">'s Hertogenbosch</option>
+        <option value="Alkmaar">Alkmaar</option>
+        <option value="Almelo">Almelo</option>
+        <option value="Almere">Almere</option>
+        <option value="Alphen aan den Rijn">Alphen aan den Rijn</option>
+        <option value="Amersfoort">Amersfoort</option>
+        <option value="Amstelveen">Amstelveen</option>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Apeldoorn">Apeldoorn</option>
+        <option value="Arnhem">Arnhem</option>
+        <option value="Assen">Assen</option>
+        <option value="Bergen op Zoom">Bergen op Zoom</option>
+        <option value="Breda">Breda</option>
+        <option value="Capelle aan den IJssel">Capelle aan den IJssel</option>
+        <option value="Delft">Delft</option>
+        <option value="Den Haag">Den Haag</option>
+        <option value="Den Helder">Den Helder</option>
+        <option value="Deventer">Deventer</option>
+        <option value="Doetinchem">Doetinchem</option>
+        <option value="Dordrecht">Dordrecht</option>
+        <option value="Ede">Ede</option>
+        <option value="Eindhoven">Eindhoven</option>
+        <option value="Emmen">Emmen</option>
+        <option value="Enschede">Enschede</option>
+        <option value="Flevoland">Flevoland</option>
+        <option value="Gouda">Gouda</option>
+        <option value="Haarlem">Haarlem</option>
+        <option value="Haarlemmermeer">Haarlemmermeer</option>
+        <option value="Heerlen">Heerlen</option>
+        <option value="Helmond">Helmond</option>
+        <option value="Hengelo">Hengelo</option>
+        <option value="Hilversum">Hilversum</option>
+        <option value="Hoogeveen">Hoogeveen</option>
+        <option value="Hoorn">Hoorn</option>
+        <option value="Katwijk">Katwijk</option>
+        <option value="Leeuwarden">Leeuwarden</option>
+        <option value="Leiden">Leiden</option>
+        <option value="Leidschendam-Voorburg">Leidschendam-Voorburg</option>
+        <option value="Lelystad">Lelystad</option>
+        <option value="Maastricht">Maastricht</option>
+        <option value="Middelburg">Middelburg</option>
+        <option value="Nieuwegein">Nieuwegein</option>
+        <option value="Nijmegen">Nijmegen</option>
+        <option value="Oss">Oss</option>
+        <option value="Purmerend">Purmerend</option>
+        <option value="Roermond">Roermond</option>
+        <option value="Roosendaal">Roosendaal</option>
+        <option value="Rotterdam">Rotterdam</option>
+        <option value="Schiedam">Schiedam</option>
+        <option value="Sittard-Geleen">Sittard-Geleen</option>
+        <option value="Spijkenisse">Spijkenisse</option>
+        <option value="Súdwest-Fryslân">Súdwest-Fryslân</option>
+        <option value="Terneuzen">Terneuzen</option>
+        <option value="Tilburg">Tilburg</option>
+        <option value="Utrecht">Utrecht</option>
+        <option value="Veenendaal">Veenendaal</option>
+        <option value="Venlo">Venlo</option>
+        <option value="Vlaardingen">Vlaardingen</option>
+        <option value="Westland">Westland</option>
+        <option value="Zaanstad">Zaanstad</option>
+        <option value="Zeist">Zeist</option>
+        <option value="Zoetermeer">Zoetermeer</option>
+        <option value="Zwolle">Zwolle</option>
+      </select>
+      <button
+        id="search-button"
+        type="button"
+        onclick="ParameterRedirect();"
+        class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-300 focus:outline-none focus:ring-4 focus:ring-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        {{ language_dict['search-button'] }}
+      </button>
+</div>
+
+<style>
+  .animated {
+     -webkit-animation-duration: 10s;animation-duration: 10s;
+     -webkit-animation-fill-mode: both;animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeOut {
+     0% {opacity: 1;}
+     100% {opacity: 0;}
+  }
+  
+  @keyframes fadeOut {
+     0% {opacity: 1;}
+     100% {opacity: 0;}
+  }
+  
+  .fadeOut {
+     -webkit-animation-name: fadeOut;
+     animation-name: fadeOut;
+  }
+</style>
+
+{% endblock %}

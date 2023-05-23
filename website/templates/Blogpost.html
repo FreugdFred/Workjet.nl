@@ -1,0 +1,23 @@
+{% extends "Base.html" %} {% set Name = "blogpost" %} {% block head %}blog post{% endblock %} {% block body %}
+
+
+<div class="rounded-xl shadow-xl bg-white mx-auto px-10 py-6 md:w-1/2 mt-20 w-5/6">
+    <form method="post">
+      <p class="font-xl font-bold">Create a blog post</p>
+      {{ form.csrf_token }}
+      <label id="post_title-label" for="id" class="mt-4 block text-sm font-medium text-gray-900">Blog title</label>
+      {{ form.post_title(id="post_title", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5")}}
+
+      <label id="post_text-label" for="id" class="mt-2 block text-sm font-medium text-gray-900">Blog text</label>
+      {{ form.post_text(id="post_text", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5")}}
+
+      <label id="post_creator-label" for="id" class="mt-2 block text-sm font-medium text-gray-900">Author</label>
+      {{ form.post_creator(id="post_creator", class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5")}}
+  
+      <div class="flex flex-col items-center justify-center mt-5">
+        <button method="submit" class="bg-blue-600 hover:bg-blue-300 w-1/2 rounded-xl text-white px-1 py-2">Sumbit blog post</button>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}

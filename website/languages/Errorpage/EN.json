@@ -1,0 +1,8 @@
+{
+    "exist-text" : "This does not seem to exist",
+    "go-btn" : "Go back to home",
+
+    "error-text" : "Server error",
+    "report-btn" : "I you want to report this bug, click here",
+    "home-btn" : "Go back to home"
+}

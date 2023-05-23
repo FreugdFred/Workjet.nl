@@ -1,0 +1,11 @@
+{
+    "anc-contact" : "contact",
+    "anc-search" : "search",
+    "anc-profile" : "profile",
+    "anc-saved" : "saved",
+    "anc-logout" : "logout",
+    "anc-login" : "login",
+    "anc-register" : "register",
+    "anc-question" : "questions",
+    "anc-blog" : "announcements"
+}

@@ -1,0 +1,11 @@
+{
+    "login-text" : "Увійдіть у ваш акаунт",
+    "alreadyknown" : "Ваш e-mail вже був зареєстрований",
+    "error" : "Ваш пароль невірний",
+    "email-label" : "Ваш e-mail",
+    "password-label" : "Пароль",
+    "forgot-text" : "Забули ваш пароль?",
+    "login-button" : "Увійдіть",
+    "dont-text" : "Ще не маєте акаунту?",
+    "sign-text" : "Зареєструйтесь тут"
+}

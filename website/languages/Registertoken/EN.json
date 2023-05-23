@@ -1,0 +1,8 @@
+{
+    "choose-text" : "Choose a password",
+    "length-text" : "Your password needs to be at least 10 characters long an max 35 characters long",
+    "password-1-label" : "Password",
+    "password-2-label" : "Confirm password",
+    "sumbit-button" : "Submit",
+    "type-2-label" : "Type account"
+    }

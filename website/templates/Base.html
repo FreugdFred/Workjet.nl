@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="A website for refugees who want to work" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="/static/Image/jet.ico" />
+    <!-- <link rel="stylesheet" href="/static/Styles/Tailwind.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block head %}{% endblock %}</title>
+  </head>
+  <body class="h-full w-full justify-center bg-cover bg-center">
+    <nav id="nav-bar" class="flex p-3 text-white">
+      <div class="absolute w-1/3 lg:relative">
+        <p onclick="location.href='/';" class="mr-6 text-xl font-bold hover:cursor-pointer md:text-5xl">Workjet</p>
+      </div>
+      <div id="dropdown-list" class="mx-auto mt-10 hidden gap-4 text-center text-xl lg:mt-auto lg:flex">
+        {% if not user.is_authenticated %}
+        <a id="anc-register" class="hover:text-slate-400" href="/register">{{ language_dict['anc-register'] }}</a>
+        <br />
+        <a id="anc-login" class="hover:text-slate-400" href="/login">{{ language_dict['anc-login'] }}</a>
+        <br />
+        {% endif %}
+        <a id="anc-search" class="hover:text-slate-400" href="/search">{{ language_dict['anc-search'] }}</a>
+        <br />
+        <a id="anc-question" class="hover:text-slate-400" href="/faq">{{ language_dict['anc-question'] }}</a>
+        <br />
+        <a id="anc-contact" class="hover:text-slate-400" href="/contact">{{ language_dict['anc-contact'] }}</a>
+        <br />
+        {% if user.is_authenticated %}
+        <a id="anc-profile" class="hover:text-slate-400" href="/profile">{{ language_dict['anc-profile'] }}</a>
+        <br />
+        <a id="anc-blog" class="hover:text-slate-400" href="/blog">{{ language_dict['anc-blog'] }}</a>
+        <br />
+        <a id="anc-saved" class="hover:text-slate-400" href="/saved">{{ language_dict['anc-saved'] }}</a>
+        <br />
+        <a id="anc-logout" class="hover:text-slate-400" href="/logout">{{ language_dict['anc-logout'] }}</a>
+        <br />
+        {% endif %}
+      </div>
+      <div id="language-list" class="mt-auto ml-auto mr-14 flex w-1/3 gap-2 lg:ml-6 xl:mr-8">
+        <button onclick="togglepopup()" class="ml-auto flex gap-2 hover:opacity-50">
+          <img class="h-8 w-8" src="/static/Image/ua.svg" alt="" />
+          <img class="h-8 w-8" src="/static/Image/nl.svg" alt="" />
+          <img class="h-8 w-8" src="/static/Image/gb.svg" alt="" />
+        </button>
+      </div>
+      <div id="dropdown-button" class="absolute top-3 right-3 mt-auto ml-2 lg:relative lg:right-0 lg:top-0">
+        <button id="dropdown" class="ml-auto space-y-2 lg:hidden">
+          <div class="h-0.5 w-8 rounded-lg bg-white"></div>
+          <div class="h-0.5 w-8 rounded-lg bg-white"></div>
+          <div class="h-0.5 w-8 rounded-lg bg-white"></div>
+        </button>
+      </div>
+    </nav>
+
+    <div id="language-popup" class="absolute top-1/2 left-1/2 z-50 w-5/6 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-4 shadow-xl md:w-1/3 hidden">
+      <p onclick="togglepopup();" id="close-language" class="absolute right-2 top-2 text-3xl font-bold hover:cursor-pointer">&times;</p>
+      <p class="text-center text-xl font-bold">Виберіть мову</p>
+      <p class="text-center text-xl font-bold">Selecteer je taal</p>
+      <p class="text-center text-xl font-bold">Select your language</p>
+      <div class="mb-10 sm:flex">
+        <div class="mx-auto mt-10 flex w-1/3 flex-col items-center justify-center md:mt-5">
+          <img onclick="SelectedLanguage('UA');" class="h-20 hover:cursor-pointer" src="/static/Image/ua.svg" alt="" />
+          <button onclick="SelectedLanguage('UA');" class="mt-2 w-20 rounded-xl bg-blue-600 text-center font-bold text-white shadow-xl hover:bg-blue-300 md:mt-5">UA</button>
+        </div>
+        <div class="mx-auto mt-10 flex w-1/3 flex-col items-center justify-center md:mt-5">
+          <img onclick="SelectedLanguage('NL');" class="h-20 hover:cursor-pointer" src="/static/Image/nl.svg" alt="" />
+          <button onclick="SelectedLanguage('NL');" class="mt-2 w-20 rounded-xl bg-blue-600 text-center font-bold text-white shadow-xl hover:bg-blue-300 md:mt-5">NL</button>
+        </div>
+        <div class="mx-auto mt-10 flex w-1/3 flex-col items-center justify-center md:mt-5">
+          <img onclick="SelectedLanguage('EN');" class="h-20 hover:cursor-pointer" src="/static/Image/gb.svg" alt="" />
+          <button onclick="SelectedLanguage('EN');" class="mt-2 w-20 rounded-xl bg-blue-600 text-center font-bold text-white shadow-xl hover:bg-blue-300 md:mt-5">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="extend-div">
+      {% block body %}{% endblock %}
+    </div>
+
+    <div class="h-10"></div>
+
+    <style>
+      body {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1119%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(37%2c 99%2c 235%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c260 C 96%2c280.8 288%2c386.2 480%2c364 C 672%2c341.8 768%2c134 960%2c149 C 1152%2c164 1344%2c381 1440%2c439L1440 560L0 560z' fill='rgba(250%2c 204%2c 21%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1119'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+      }
+    </style>
+
+    <script src="{{ url_for('static', filename='Scripts/Base.js') }}" defer></script>
+    <script src="/static/Scripts/{{Name}}.js" defer></script>
+  </body>
+</html>

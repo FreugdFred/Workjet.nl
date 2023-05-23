@@ -1,0 +1,28 @@
+{
+    "text-btn" : "Отримати контактну інформацію робітників",
+    "send-email-text" : "Напишіть нам, щоб отримати контактну інформацію робітників",
+    "button-text-copy" : "Скопіювати",
+
+    "inexperience-title" : "Досвід роботи в Україні",
+    "experience-title" : "Досвід роботи за межами України",
+    "comments-title" : "Дипломи, водійське посвідчення, хоббі",
+    "trigger" : "кінець сторінки",
+
+    "landbouw-work" : "Агрікультура", 
+    "bouw-work" : "Будівництво", 
+    "handel-work" : "Продажа", 
+    "gezondheidszorg-work" : "Здоров‘я", 
+    "communicatie-work" : "Комунікації", 
+    "onderwijs-work" : "Освіта", 
+    "horeca-work" : "Готель/Харчування", 
+    "transport-work" : "Траспорт", 
+    "productie-work" : "Продукція/Пакування", 
+    "engineering-work" : "Техніка",
+
+    "MEN" : "чоловік",
+    "WOMAN" : "жінка",
+    "FULLTIME" : "36-40 год в тиждень",
+    "PARTTIME" : "2-36 год в тиждень",
+    "LOOKING" : "Шукаю роботу",
+    "NOTLOOKING" : "Не шукаю роботу"
+}
